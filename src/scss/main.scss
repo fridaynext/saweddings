@@ -1,5 +1,5 @@
 @import "../../node_modules/bootstrap/scss/functions";
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 @import "variables/bootstrap";
 
 // Colors
@@ -15,8 +15,6 @@ $theme-colors: (
   'light-gray': #dfdfdf,     // 'Light Gray'     background light
   'orange': #ed4d3d          // 'Orange'         background orange
 );
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
 
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -55,3 +53,6 @@ $theme-colors: (
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/print";
 @import "../../node_modules/font-awesome/scss/font-awesome";
+
+// Friday Next Imports
+@import "blocks/navbar";
