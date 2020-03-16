@@ -6,3 +6,63 @@ main {
     font-size: .7em;
   }
 }
+@keyframes link {
+  from {}
+}
+#local-faves {
+  #title {
+    font-family: $roboto-condensed;
+    text-transform: uppercase;
+  }
+  .card {
+    border: none;
+    box-shadow: none;
+    transition: .2s;
+  }
+  .card:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: .2s;
+  }
+  .card-body {
+    font-family: $roboto-condensed;
+    font-size: .8em;
+    z-index: 99;
+  }
+  .card-img-overlay {
+    opacity: 0;
+    transition: .2s;
+  }
+  a.local-fave:hover .card-img-overlay {
+    opacity: .3;
+    transition: .2s;
+  }
+}
+
+#featured-spotlights {
+  #title {
+    font-family: $roboto-condensed;
+    text-transform: uppercase;
+  }
+  .card {
+    border: none;
+    box-shadow: none;
+    transition: .2s;
+  }
+  .card:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: .2s;
+  }
+  .card-body {
+    font-family: $roboto-condensed;
+    font-size: .8em;
+    z-index: 99;
+  }
+  .card-img-overlay {
+    opacity: 0;
+    transition: .2s;
+  }
+  a.featured-spotlight:hover .card-img-overlay {
+    opacity: .3;
+    transition: .2s;
+  }
+}
