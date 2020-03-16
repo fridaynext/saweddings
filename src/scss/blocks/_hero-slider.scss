@@ -1,0 +1,27 @@
+#hero-slider {
+  .first-title {
+    font-size: 1.8em;
+    font-family: $open-sans-condensed;
+    font-weight: bold;
+  }
+  .quote {
+    border-left: .2em solid #434142;
+    font-size: 2.1em;
+    line-height: 1em;
+    font-family: $open-sans-condensed;
+    font-weight: bold;
+    margin-right: -6em;
+  }
+  .extra-text {
+    font-size: .8em;
+    line-height: 1.3em;
+    margin-right: -2em;
+    font-family: $open-sans;
+  }
+  .read-more {
+    a {
+      border: 2px solid white;
+      border-radius: 10px;
+    }
+  }
+}
