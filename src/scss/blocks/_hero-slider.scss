@@ -1,11 +1,15 @@
 #hero-slider {
+  .right-border-saw {
+    background: url('../img/SAW-hero-border.png') right center no-repeat;
+    background-size: cover;
+  }
   .first-title {
     font-size: 1.8em;
     font-family: $open-sans-condensed;
     font-weight: bold;
   }
   .quote {
-    border-left: .2em solid #434142;
+    border-left: .2em solid #000;
     font-size: 2.1em;
     line-height: 1em;
     font-family: $open-sans-condensed;
