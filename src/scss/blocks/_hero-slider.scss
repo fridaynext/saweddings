@@ -1,7 +1,8 @@
 #hero-slider {
   .right-border-saw {
     background: url('../img/SAW-hero-border.png') right center no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    max-width: 625px;
   }
   .first-title {
     font-size: 1.8em;

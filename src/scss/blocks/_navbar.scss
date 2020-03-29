@@ -3,16 +3,36 @@ nav#top-nav {
     text-transform: uppercase;
     font-size: .8em;
   }
+
   div.border-right.border-silver-gray {
     height: 1.3em;
   }
+
   i.fa {
     font-size: 1.6em;
   }
 }
 
 #mid-nav {
+  top: 70px;
+
   li a {
     text-transform: uppercase;
   }
+
+  #nav-search {
+    input {
+      height: 1.6rem;
+      border-radius: 1.5rem;
+    }
+  }
+}
+
+.dropdown-item, .dropdown-item-text {
+  font-size: .8em;
+}
+
+.vendors-dropdown-menu {
+  height: 500px;
+  overflow-y: scroll;
 }
