@@ -1,4 +1,4 @@
-#hero-slider {
+.hero-slider {
   .right-border-saw {
     background: url('../img/SAW-hero-border.png') right center no-repeat;
     background-size: 100% 100%;
@@ -10,7 +10,17 @@
     font-weight: bold;
   }
   .quote {
-    border-left: .2em solid #000;
+    border-left: .2em;
+    border-style: solid;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    &.white {
+      border-color: #000;
+    }
+    &.orange {
+      border-color: map-get($theme-colors, "orange");
+    }
     font-size: 2.1em;
     line-height: 1em;
     font-family: $open-sans-condensed;
@@ -25,8 +35,13 @@
   }
   .read-more {
     a {
-      border: 2px solid white;
+      border: 2px;
+      border-style: solid;
       border-radius: 10px;
     }
+  }
+  .bg-gradient-black {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.8421743697478992) 0%, rgba(0,0,0,0.6096813725490196) 69%, rgba(0,0,0,0) 100%);
   }
 }

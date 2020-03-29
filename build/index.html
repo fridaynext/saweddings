@@ -65,34 +65,69 @@
 
 
 <!---------- Hero Slider Section -------------->
-<div id="hero-slider" class="ml-n4 pl-4 my-1 ">
-    <div class="d-flex flex-row pl-0"
-         style="background: url(img/Slider-Template-Table-Image-800pixels-deep.jpg); background-repeat: no-repeat; background-size: cover; background-position: right center;">
-        <!-- FIRST (ORANGE) HERO SLIDER -->
+<div id="carouselSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
 
-        <div class="right-border-saw col-6 flex-row pl-0"> <!-- LEFT HALF (ORANGE HALF) -->
-            <div class="col-6  py-4 pl-4">
-                <div class="pl-5">
-                    <h3 class="first-title text-uppercase pb-3 pt-5">Unique Weddings</h3>
-                    <div class="quote text-white row-4 text-uppercase pl-3">
-                        At Sunset Ranch we can design the custom wedding of your dreams.
+        <!--start *********** FIRST SLIDE w/ Orange SAW Icon BG ************* start-->
+        <div class="carousel-item active">
+            <div id="hero-slider-1" class="ml-n4 pl-4 my-1 hero-slider">
+                <div class="d-flex flex-row pl-0"
+                     style="background-size: cover; background-image: url(img/Slider-Template-Table-Image-800pixels-deep.jpg); background-repeat: no-repeat; background-position: right center;">
+                    <!-- FIRST (ORANGE) HERO SLIDER -->
+                    <div class="right-border-saw col-6 flex-row pl-0"> <!-- LEFT HALF (ORANGE HALF) -->
+                        <div class="col-6  py-4 pl-4">
+                            <div class="pl-5">
+                                <h3 class="first-title text-uppercase pb-3 pt-5">Unique Weddings</h3>
+                                <div class="quote white text-white row-4 text-uppercase pl-3">
+                                    At Sunset Ranch we can design the custom wedding of your dreams.
+                                </div>
+                                <div class="extra-text text-uppercase row-4 pl-4 pt-3 pb-3">
+                                    Check out San Antonio Weddings charming French country styled shoot at Sunset
+                                    Weddings.
+                                </div>
+                                <div class="read-more pt-2 pb-5">
+                                    <a href="#" class="border-white px-4 py-1 text-white">Read More<i
+                                            class="fa fa-angle-double-right pl-2"
+                                            aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="extra-text text-uppercase row-4 pl-4 pt-3 pb-3">
-                        Check out San Antonio Weddings charming French country styled shoot at Sunset Weddings.
-                    </div>
-                    <div class="read-more pt-2 pb-5">
-                        <a href="#" class="px-4 py-1 text-white">Read More<i class="fa fa-angle-double-right pl-2"
-                                                                             aria-hidden="true"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <!--end *************** END First Slide ******************************* end-->
+
+        <!--start *********** SECOND SLIDE w/Photo BG Only  ***************** start-->
+        <div class="carousel-item">
+            <div class="carousel-item active">
+                <div id="hero-slider-2" class="ml-n4 pl-4 my-1 hero-slider">
+                    <div class="d-flex flex-row pl-0"
+                         style="background-size: cover; background-image: url(img/Slider-Template-People-Image-800pixels-deep.jpg); background-repeat: no-repeat; background-position:left center;">
+                        <div class="bg-gradient-black col-6 d-flex flex-row pl-0"> <!-- LEFT HALF - Black alpha gradient -->
+                            <div class="col-6  py-4 pl-4 my-auto">
+                                <div class="pl-5">
+                                    <div class="quote orange text-white row-4 text-uppercase pl-3 mb-5">
+                                        Enchanting in burgundy and blush at The Club of Garden Ridge
+                                    </div>
+                                    <div class="read-more pt-2 pb-5">
+                                        <a href="#" class="border-orange px-4 py-1 text-white">Read More<i
+                                                class="fa fa-angle-double-right pl-2"
+                                                aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-6">
+        <!--end **************** END Second Slide ***************************** end-->
 
-        </div> <!-- RIGHT HALF (PHOTO HALF) -->
     </div>
 </div>
-<!---------- END: Hero Slider Section --------->
 
 
 <!-------------- Mid Nav Bar ------------------>
@@ -103,9 +138,11 @@
                 <li class="nav-item"><a href="#" class="nav-link text-white font-weight-bold">Styled Shoots</a></li>
                 <li class="nav-item">
                     <div class="dropdown">
-                        <a href="#" class="nav-link text-silver-gray dropdown-toggle" role="button"
-                           id="dropdown-eventsoffers" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true" aria-expanded="false">Events/Offers</a>
-                        <div class="dropdown-menu shadow border-0 rounded-0 px-2" aria-labelledby="dropdown-eventsoffers">
+                        <a href="#" class="nav-link text-silver-gray" role="button"
+                           id="dropdown-eventsoffers" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true"
+                           aria-expanded="false">Events/Offers</a>
+                        <div class="dropdown-menu shadow border-0 rounded-0 px-2"
+                             aria-labelledby="dropdown-eventsoffers">
                             <a class="dropdown-item px-2 py-0" href="#">Events Calendar</a>
                             <div class="dropdown-divider border-soft-teal"></div>
                             <a class="dropdown-item px-2 py-0" href="#">Special Offers</a>
@@ -114,9 +151,11 @@
                 </li>
                 <li class="nav-item">
                     <div class="dropdown ">
-                        <a href="#" class="nav-link text-silver-gray dropdown-toggle" role="button"
-                           id="dropdown-inspiration" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true" aria-expanded="false">Inspiration</a>
-                        <div class="dropdown-menu shadow border-0 rounded-0 px-2" aria-labelledby="dropdown-inspiration">
+                        <a href="#" class="nav-link text-silver-gray" role="button"
+                           id="dropdown-inspiration" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true"
+                           aria-expanded="false">Inspiration</a>
+                        <div class="dropdown-menu shadow border-0 rounded-0 px-2"
+                             aria-labelledby="dropdown-inspiration">
                             <a class="dropdown-item px-2 py-0" href="#">Blog</a>
                             <div class="dropdown-divider border-soft-teal"></div>
                             <a class="dropdown-item px-2 py-0" href="#">Spotlight Articles</a>
@@ -139,8 +178,9 @@
             <ul class="nav d-flex justify-content-between">
                 <li class="nav-item d-flex flex-direction-row align-content-center">
                     <div class="dropdown">
-                        <a href="#" class="nav-link text-silver-gray dropdown-toggle" role="button"
-                           id="dropdown-planning" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true" aria-expanded="false">Planning</a>
+                        <a href="#" class="nav-link text-silver-gray" role="button"
+                           id="dropdown-planning" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true"
+                           aria-expanded="false">Planning</a>
                         <div class="dropdown-menu shadow px-2 border-0 rounded-0" aria-labelledby="dropdown-planning">
                             <a class="dropdown-item px-2 py-0" href="#">Compare Vendors</a>
                             <div class="dropdown-divider border-soft-teal"></div>
@@ -157,16 +197,19 @@
                     </div>
                 <li class="nav-item">  <!-- *********** VENDORS DROPDOWN MENU **************** -->
                     <div class="dropdown">
-                        <a href="#" class="nav-link text-silver-gray dropdown-toggle" role="button"
-                           id="dropdown-vendors" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true" aria-expanded="false">Vendors</a>
-                        <div class="dropdown-menu border-dark-teal bg-soft-teal shadow p-0 rounded-0 vendors-dropdown-menu" aria-labelledby="dropdown-vendors">
-<!--                            <span class="arrow-up"></span>-->
+                        <a href="#" class="nav-link text-silver-gray" role="button"
+                           id="dropdown-vendors" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true"
+                           aria-expanded="false">Vendors</a>
+                        <div class="dropdown-menu border-dark-teal bg-soft-teal shadow p-0 rounded-0 vendors-dropdown-menu"
+                             aria-labelledby="dropdown-vendors">
+                            <!--                            <span class="arrow-up"></span>-->
                             <span class="dropdown-item-text bg-white p-2 text-center text-uppercase">Choose a Vendor Category</span>
                             <a href="#" class="dropdown-item px-2 py-1 text-center">Alterations</a>
                             <div class="dropdown-divider border-white mx-2 my-0"></div>
                             <a href="#" class="dropdown-item px-2 py-1 text-center">Animal Rentals</a>
                             <div class="dropdown-divider border-white mx-2 my-0"></div>
-                            <a href="#" class="dropdown-item px-2 py-1 text-center">Bachelor and Bachelorette Parties</a>
+                            <a href="#" class="dropdown-item px-2 py-1 text-center">Bachelor and Bachelorette
+                                Parties</a>
                             <div class="dropdown-divider border-white mx-2 my-0"></div>
                             <a href="#" class="dropdown-item px-2 py-1 text-center">Bands</a>
                             <div class="dropdown-divider border-white mx-2 my-0"></div>
@@ -483,7 +526,124 @@
 <div id="bottom-nav" class="bg-charcoal-black">
     <div class="container d-flex flex-grow-2 flex-row nav py-2 px-0 no-gutters mx-auto">
         <div class="col-1"> <!-- Vendors Popup Hamburger -->
-            <a href="#"><img src="img/vendors-menu.png" width="35" height="auto" class="pt-1"/></a>
+            <div class="dropdown">
+                <a href="#" class="nav-link text-silver-gray" role="button"
+                   id="dropdown-vendors" data-toggle="dropdown" data-offset="10,7" aria-haspopup="true"
+                   aria-expanded="false"><img src="img/vendors-menu.png" width="35" height="auto" class="pt-1"/></a>
+                <div class="dropdown-menu border-dark-teal bg-soft-teal shadow p-0 rounded-0 vendors-dropdown-menu"
+                     aria-labelledby="dropdown-vendors">
+                    <!--                            <span class="arrow-up"></span>-->
+                    <span class="dropdown-item-text bg-white p-2 text-center text-uppercase">Choose a Vendor Category</span>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Alterations</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Animal Rentals</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Bachelor and Bachelorette
+                        Parties</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Bands</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Bartending & Beverages</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Beauty & Wellness</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Boudoir Photography</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Bridal Attire</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Bridal Shows</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Cakes & Sweets</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Calligraphy</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Caricature Artists</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Carriage Rides</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Caterers</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Cigars</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Dance Floor</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Dance Instruction</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Décor</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Destination Weddings</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">DJs</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Dry Cleaners</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Elopements</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Fireworks</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Flipbooks</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Florists</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Flower Girl Dresses</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Gifts</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Gown Preservation</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Guest Accomodations</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Hair & Makeup</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Honeymoon & Travel</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Ice Sculptures</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Invitations</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Jewelers</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Lighting</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Linens</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Lounge Furniture</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Mother-of-the-Bride Fashions</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Musicians</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Officiant</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Photobooths</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Photography</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Popcorn</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Premarital Counseling</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Reception Venues</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Rehearsal Dinners</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Rentals - General</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Rentals - Vintage</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Spa</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Tuxedos</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Videography</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Vocalists</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Wedding Ceremony Only</a>
+                    <div class="dropdown-divider border-white mx-2 my-0"></div>
+                    <a href="#" class="dropdown-item px-2 py-1 text-center">Wedding Planners</a>
+                </div>
+            </div>
         </div>
         <div class="col-4"> <!-- Left side of mid-nav -->
             <ul class="nav d-flex justify-content-between">
@@ -536,6 +696,7 @@
 <script src="../node_modules/jquery/dist/jquery.js"></script>
 <!--<script src="../node_modules/@popperjs/core/dist/umd/popper.js"></script>-->
 <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/site-min.js"></script>
 <!-- End Local Versions -->
 
 </body>
