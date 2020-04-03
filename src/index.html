@@ -20,42 +20,48 @@
 <!-------------- Top Nav Bar ------------------>
 <nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-charcoal-black sticky-top">
     <div class="d-flex flex-grow-1">
-        <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+<!--        <span class="w-100 d-lg-none d-block">&lt;!&ndash; hidden spacer to center brand on mobile &ndash;&gt;</span>-->
         <a class="navbar-brand" href="#">
-            <img src="img/SAW-Logo-top-Menu-computer-only.png" width="auto" height="45"/>
+            <img src="img/SAW-Logo-top-Menu-computer-only.png" width="auto" height="45" class="d-none d-lg-block"/>
+            <img src="img/SAW-Logo-top-Menu-tablet-phone-only.png" alt="San Antonio Weddings" width="auto" height="35" class="d-block d-lg-none"/>
         </a>
-        <div class="w-100 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+<!--        <div class="w-100 text-right">-->
+<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNavbar">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--        </div>-->
     </div>
-    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-        <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item d-inline-flex">
+    <div class="ml-auto flex-grow-1 text-right" id="mobileNavbar">
+        <ul class="navbar-nav ml-lg-auto d-flex align-items-center flex-nowrap flex-row justify-content-end">
+            <li class="nav-item d-none d-lg-inline">
                 <a href="#" class="nav-link text-silver-gray d-inline-flex ">Submit Your Engagement</a>
             </li>
-            <li class="nav-item d-flex"> <!-- Horizontal Separator in Desktop Top Nav -->
+            <li class="nav-item d-none d-lg-flex"> <!-- Horizontal Separator in Desktop Top Nav -->
                 <div class="border-right border-silver-gray my-auto"></div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none d-lg-inline">
                 <a href="#" class="nav-link text-silver-gray align-middle">Submit Your Wedding</a>
             </li>
-            <li class="nav-item d-flex"> <!-- Horizontal Separator in Desktop Top Nav -->
+            <li class="nav-item d-none d-lg-flex"> <!-- Horizontal Separator in Desktop Top Nav -->
                 <div class="border-right border-silver-gray my-auto"></div>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-silver-gray align-middle">Vendor Login</a>
+            <li class="nav-item d-none d-sm-inline pr-2 pr-lg-1">
+                <a href="#" class="nav-link text-silver-gray">Vendor Login</a>
             </li>
+            <li class="nav-item d-none d-sm-flex pl-2 d-lg-none"> <!-- Horizontal Separator in Desktop Top Nav -->
+                <div class="border-right border-silver-gray my-auto"></div>
+            </li>
+
             <!-- ------- SOCIAL MEDIA ICONS IN TOP NAV ------- -->
-            <li class="nav-item d-flex">
-                <a href="#" class="nav-link d-inline my-auto">
+
+            <li class="nav-item text-center d-flex py-2 py-lg-0">
+                <a href="#" class="nav-link d-inline my-auto px-2 px-lg-1">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
-                <a href="#" class="nav-link d-inline my-auto">
+                <a href="#" class="nav-link d-inline my-auto px-2 px-lg-1">
                     <i class="fa fa-pinterest" aria-hidden="true"></i>
                 </a>
-                <a href="#" class="nav-link d-inline my-auto">
+                <a href="#" class="nav-link d-inline my-auto px-2 px-lg-1">
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
             </li>
@@ -161,7 +167,7 @@
                             <div class="dropdown-divider border-soft-teal"></div>
                             <a class="dropdown-item px-2 py-0" href="#">Spotlight Articles</a>
                             <div class="dropdown-divider border-soft-teal"></div>
-                            <a class="dropdown-item px-2 py-0" href="#">Real Weddings</a>
+                            <a class="dropdown-item px-2 py-0" href="#">Our Wedding Story</a>
                             <div class="dropdown-divider border-soft-teal"></div>
                             <a class="dropdown-item px-2 py-0" href="#">Submit Your Wedding</a>
                             <div class="dropdown-divider border-soft-teal"></div>

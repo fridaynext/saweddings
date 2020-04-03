@@ -1,5 +1,4 @@
 @import "../../node_modules/bootstrap/scss/functions";
-@import "variables/bootstrap";
 
 // Colors
 
@@ -7,15 +6,33 @@
 //Medium Gray #808285
 
 $theme-colors: (
-  'medium-gray': #000,    // 'Medium Gray'    body text
-  'silver-gray': #c8c8c8,    // 'Silver Gray'    light text
-  'charcoal-black': #000, // 'Charcoal Black' background dark
-  'soft-teal': #8cbcbf,      // 'Soft Teal'      background teal
-  'dark-teal': #475b5c,      // 'Dark Teal'
-  'light-gray': #dfdfdf,     // 'Light Gray'     background light
-  'orange': #d15154          // 'Orange'         background orange
+  'medium-gray': #000,    // 'Medium Gray'      body text
+  'silver-gray': #c8c8c8, // 'Silver Gray'      light text
+  'secondary' : #c8c8c8,
+  'charcoal-black': #000, // 'Charcoal Black'   background dark
+  'dark' : #000,
+  'soft-teal': #8cbcbf,   // 'Soft Teal'        background teal
+  'primary' : #8cbcbf,
+  'success' : #8cbcbf,
+  'dark-teal': #475b5c,   // 'Dark Teal'
+  'light-gray': #dfdfdf,  // 'Light Gray'       background light
+  'info' : #c8c8c8,
+  'orange': #d15154,   // 'Redorange'        background orange
+  'warning' : #d15154,
+  'danger' : #d15154
 );
 
+// Change Theme colors to match above defined SAW colors
+$primary:       map_get($theme-colors, "soft-teal");
+$secondary:     map_get($theme-colors, "silver-gray");
+$success:       map_get($theme-colors, "soft-teal");
+$info:          map_get($theme-colors, "silver-gray");
+$warning:       map_get($theme-colors, "orange");
+$danger:        map_get($theme-colors, "orange");
+$light:         map_get($theme-colors, "silver-gray");
+$dark:          map_get($theme-colors, "charcoal-black");
+
+@import "variables/bootstrap";
 
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
