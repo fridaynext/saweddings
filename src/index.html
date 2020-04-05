@@ -20,16 +20,17 @@
 <!-------------- Top Nav Bar ------------------>
 <nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-charcoal-black sticky-top">
     <div class="d-flex flex-grow-1">
-<!--        <span class="w-100 d-lg-none d-block">&lt;!&ndash; hidden spacer to center brand on mobile &ndash;&gt;</span>-->
+        <!--        <span class="w-100 d-lg-none d-block">&lt;!&ndash; hidden spacer to center brand on mobile &ndash;&gt;</span>-->
         <a class="navbar-brand" href="#">
             <img src="img/SAW-Logo-top-Menu-computer-only.png" width="auto" height="45" class="d-none d-lg-block"/>
-            <img src="img/SAW-Logo-top-Menu-tablet-phone-only.png" alt="San Antonio Weddings" width="auto" height="35" class="d-block d-lg-none"/>
+            <img src="img/SAW-Logo-top-Menu-tablet-phone-only.png" alt="San Antonio Weddings" width="auto" height="35"
+                 class="d-block d-lg-none"/>
         </a>
-<!--        <div class="w-100 text-right">-->
-<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNavbar">-->
-<!--                <span class="navbar-toggler-icon"></span>-->
-<!--            </button>-->
-<!--        </div>-->
+        <!--        <div class="w-100 text-right">-->
+        <!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNavbar">-->
+        <!--                <span class="navbar-toggler-icon"></span>-->
+        <!--            </button>-->
+        <!--        </div>-->
     </div>
     <div class="ml-auto flex-grow-1 text-right" id="mobileNavbar">
         <ul class="navbar-nav ml-lg-auto d-flex align-items-center flex-nowrap flex-row justify-content-end">
@@ -72,9 +73,8 @@
 
 
 <!---------- Hero Slider Section -------------->
-<div id="carouselSlidesOnly" class="carousel slide" data-ride="carousel">
+<div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
     <div class="carousel-inner">
-
         <!--start *********** FIRST SLIDE w/ Orange SAW Icon BG ************* start-->
         <div class="carousel-item active">
             <div id="hero-slider-1" class="ml-n4 pl-4 my-1 hero-slider">
@@ -108,26 +108,24 @@
 
         <!--start *********** SECOND SLIDE w/Photo BG Only  ***************** start-->
         <div class="carousel-item">
-            <div class="carousel-item active">
-                <div id="hero-slider-2" class="ml-n4 pl-4 my-1 hero-slider">
-                    <div class="d-flex flex-row pl-0"
-                         style="background-size: cover; background-image: url(img/Slider-Template-People-Image-800pixels-deep.jpg); background-repeat: no-repeat; background-position:left center;">
-                        <div class="bg-gradient-black col-6 d-flex flex-row pl-0"> <!-- LEFT HALF - Black alpha gradient -->
-                            <div class="col-6  py-4 pl-4 my-auto">
-                                <div class="pl-5">
-                                    <div class="quote orange text-white row-4 text-uppercase pl-3 mb-5">
-                                        Enchanting in burgundy and blush at The Club of Garden Ridge
-                                    </div>
-                                    <div class="read-more pt-2 pb-5">
-                                        <a href="#" class="border-orange px-4 py-1 text-white">Read More<i
-                                                class="fa fa-angle-double-right pl-2"
-                                                aria-hidden="true"></i></a>
-                                    </div>
+            <div id="hero-slider-2" class="ml-n4 pl-4 my-1 hero-slider">
+                <div class="d-flex flex-row pl-0"
+                     style="background-size: cover; background-image: url(img/Slider-Template-People-Image-800pixels-deep.jpg); background-repeat: no-repeat; background-position:left center;">
+                    <div class="bg-gradient-black col-6 d-flex flex-row pl-0"> <!-- LEFT HALF - Black alpha gradient -->
+                        <div class="col-6  py-4 pl-4 my-auto">
+                            <div class="pl-5">
+                                <div class="quote orange text-white row-4 text-uppercase pl-3 mb-5">
+                                    Enchanting in burgundy and blush at The Club of Garden Ridge
+                                </div>
+                                <div class="read-more pt-2 pb-5">
+                                    <a href="#" class="border-orange px-4 py-1 text-white">Read More<i
+                                            class="fa fa-angle-double-right pl-2"
+                                            aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </div>
@@ -702,9 +700,15 @@
 <!-- End Local Versions -->
 
 <!-- Online versions -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <!-- END Online Versions -->
 
