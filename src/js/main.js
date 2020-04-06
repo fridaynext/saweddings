@@ -1,16 +1,23 @@
 $(document).ready(function () {
+
+    // $('#hero-slider-1 .d-flex').css('height', '477px');
     // Set height of second slide, when carousel changes
     $('#heroCarousel').on('slide.bs.carousel', function (event) {
-
-        let index = event.from;
+        let thisIndex = event.from;
         let thisSlideHeight = $(this).css("height");
         $(this).children().each(function (index) {
             if (index < 1) {
                 $(this).children().each(function (indexB) {
                     if (indexB < 1) {
                         $(this).children().each(function (indexC) {
-                            thisSlideHeight = $(this).css("height");
-                            $(this).css("height", thisSlideHeight);
+                            if(indexC < 1) {
+                                $(this).children().each(function (indexD) {
+                                    if(indexD === thisIndex) {
+                                        thisSlideHeight = $(this).css("height");
+                                        $(this).css("height", thisSlideHeight);
+                                    }
+                                });
+                            }
                         });
                     }
                 });
@@ -23,5 +30,28 @@ $(document).ready(function () {
                 $(this).css("height", thisSlideHeight);
             }
         });
-    })
+    });
+    $('#heroCarousel').on('slid.bs.carousel',function (event) {
+        // Reset height to 'auto', so resizing window will resize the hero
+        let thisIndex = event.from;
+        $(this).children().each(function (index) {
+            if (index < 1) {
+                $(this).children().each(function (indexB) {
+                    if (indexB < 1) {
+                        $(this).children().each(function (indexC) {
+                            if(indexC < 1) {
+                                $(this).children().each(function (indexD) {
+                                    if(indexD === thisIndex) {
+                                        $(this).css("height", "fit-content");
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    });
+    // listen for small breakpoint, and then resize the hero slider section
+
 });
