@@ -1,49 +1,68 @@
 $(document).ready(function () {
 
-    /* Want to allow a specific size
-     *  1. Start desktop, go smaller
-     *  2. Start mobile, go bigger
-     *  3. Desktop -> make smaller -> make bigger
-     */
-
-    // $('#hero-slider-1 .d-flex').css('height', '477px');
-    // Set height of second slide, when carousel changes
     $('#heroCarousel').on('slide.bs.carousel', function (event) {
+
+        // Get Current Slide Height and Use it for Future
         let thisIndex = event.from;
         let thisSlideId = "#hero-slider-" + (thisIndex + 1);
-        let thisSlideHeight = $(thisSlideId + " > .slide-container").height();
-        $(thisSlideId + " > .slide-container").height(thisSlideHeight);
+        let thisSlideHeight = normalizeSlideHeight($(this), thisSlideId);
 
-        // check if #hero-spacer-1 (or #hero-spacer-x) is visible, and if so, set height to 275px
-        if($("#hero-spacer" + (thisIndex+1)).css("display") !== none) {
-            // then set height to 275px
-        }
-        console.log($(thisSlideId + " > .slide-container").innerHeight());;
-
+        // console.log("This Slide Height is: " + thisSlideHeight);
+        // Get Next Slide Height to compare which is smaller / larger
         let nextIndex = event.to;
         let nextSlideId = "#hero-slider-" + (nextIndex + 1);
-        // check if inner height is bigger than the height we're assigning, so we don't smush too much stuff inside a div
-        let nextSlideInnerHeight = $(nextSlideId + " .hero-text-content").innerHeight();
-        console.log($('.right-border-saw').innerHeight());
-        // console.log(nextSlideInnerHeight);
-        // let totalHeight = 0;
-        // $(nextSlideId + " .hero-text-content div").each(function (index, element) {
-        //     console.log(element.valueOf());
-        // });
-        // console.log(totalHeight);
-        if(nextSlideInnerHeight >= thisSlideHeight) {
-            thisSlideHeight = innerHeight;
-        }
+        let nextSlideHeight = thisSlideHeight;
         $(nextSlideId + " > .slide-container").height(thisSlideHeight);
 
+        // console.log(event.relatedTarget);
+        let checkNextSlideHeight = normalizeSlideHeight($(this), nextSlideId);
+
+
+        if ($(window).width() > 576) {
+            if (checkNextSlideHeight > nextSlideHeight) {
+                nextSlideHeight = checkNextSlideHeight;
+            }
+        } else {
+            nextSlideHeight = "250px";
+        }
+        $(nextSlideId + " > .slide-container").height(nextSlideHeight);
+        console.log("Check next slide height is: " + checkNextSlideHeight);
+        console.log("Next Slide Height is: " + nextSlideHeight);
 
     });
-    // $('#heroCarousel').on('slid.bs.carousel',function (event) {
-    //     // Reset height to 'auto', so resizing window will resize the hero
-    //     let thisIndex = event.to;
-    //     let thisSlideId = "#hero-slider-" + (thisIndex + 1);
-    //     $(thisSlideId + " > .hero-slider").height("fill-container");
-    // });
-    // listen for small breakpoint, and then resize the hero slider section
+    $('#heroCarousel').on('slid.bs.carousel', function (event) {
 
+        let thisIndex = event.from;
+        let thisSlideId = "#hero-slider-" + (thisIndex + 1);
+        let thisSlideHeight = normalizeSlideHeight($(this), thisSlideId);
+        console.log("On slid height: " + thisSlideHeight);
+    });
+
+    // Make sure heights are correct when resizing
+    $(window).resize(function () {
+        if ($(window).width() < 576) {
+            $("#heroCarousel .carousel-item.active .slide-container").height(250).css("min-height","initial");
+        } else {
+            $("#heroCarousel .carousel-item.active .slide-container").height("initial");
+            normalizeSlideHeight($("#heroCarousel"),"#hero-slider-1");
+        }
+    });
+
+    // listen for small breakpoint, and then resize the hero slider section
+    function normalizeSlideHeight(thisObj, slideId) {
+        let thisSlideHeight;
+        thisObj.each(function () {
+            let items = $(slideId + " > .slide-container", this);
+            // reset the height
+            items.css("min-height", 0);
+            // set the height
+            let maxHeight = Math.max.apply(null,
+                items.map(function () {
+                    return $(this).outerHeight()
+                }).get());
+            items.css("min-height", maxHeight + "px");
+            thisSlideHeight = maxHeight;
+        });
+        return thisSlideHeight;
+    }
 });

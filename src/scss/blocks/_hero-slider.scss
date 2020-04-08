@@ -44,4 +44,14 @@
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.8421743697478992) 0%, rgba(0,0,0,0.6096813725490196) 69%, rgba(0,0,0,0) 100%);
   }
+  @media screen and (max-width: 576px) {
+    .slide-container {
+      height: 250px;
+    }
+  }
+  @media screen and (min-width: 576px) {
+    .slide-container {
+      height: fit-content;
+    }
+  }
 }
